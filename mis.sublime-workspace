@@ -1,0 +1,579 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"in",
+				"include <header>	"
+			],
+			[
+				"using",
+				"using namespace identifier	"
+			],
+			[
+				"inc",
+				"include <header>	"
+			],
+			[
+				"include",
+				"include <header>	"
+			],
+			[
+				"tet",
+				"testVar	int"
+			],
+			[
+				"Te",
+				"TestVar()	int"
+			],
+			[
+				"incl",
+				"include <header>	"
+			],
+			[
+				"gr",
+				"greet"
+			],
+			[
+				"html",
+				"html	html"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "main.cpp",
+			"settings":
+			{
+				"buffer_size": 3305,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "makefile",
+			"settings":
+			{
+				"buffer_size": 67,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"ine",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"ena",
+				"Package Control: Enable Package"
+			],
+			[
+				"git add",
+				"Git: Add..."
+			],
+			[
+				"pu",
+				"Git: Push"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"push",
+				"Git: Push"
+			],
+			[
+				"co",
+				"Git: Commit"
+			],
+			[
+				"diff",
+				"Git: Diff All"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"git ",
+				"Git: Pull"
+			],
+			[
+				"git",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"up",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"tab",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"git commit",
+				"Git: Commit"
+			],
+			[
+				"git comm",
+				"Git: Commit"
+			],
+			[
+				"gi",
+				"Git: Custom Command"
+			],
+			[
+				"git co",
+				"Git: Commit"
+			],
+			[
+				"git a",
+				"Git: Add..."
+			],
+			[
+				"togg",
+				"View: Toggle Side Bar"
+			],
+			[
+				"side",
+				"View: Toggle Side Bar"
+			],
+			[
+				"tra",
+				"Trailing Spaces: Toggle Trailing Spaces"
+			],
+			[
+				"de",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"hg",
+				"SublimeHg: Open Menu"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"todo",
+				"Show TODOs in project and open files"
+			],
+			[
+				"re",
+				"Package Control: Remove Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"to",
+				"Todo: List All"
+			],
+			[
+				"git di",
+				"Git: Diff All"
+			],
+			[
+				"commit",
+				"Git: Commit"
+			],
+			[
+				"gitadd",
+				"Git: Add..."
+			],
+			[
+				"cha",
+				"Git: Change Branch"
+			],
+			[
+				"gra",
+				"Git: Graph All"
+			],
+			[
+				"pref",
+				"Git: Graph Current File"
+			],
+			[
+				"bra",
+				"Git: Change Branch"
+			],
+			[
+				"bran",
+				"Git: Change Branch"
+			],
+			[
+				"che",
+				"Git: Change Branch"
+			],
+			[
+				"chan",
+				"Git: Change Branch"
+			],
+			[
+				"add",
+				"Git: Add Current File"
+			],
+			[
+				"packa",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"termi",
+				"Preferences: Terminal Settings – Default"
+			],
+			[
+				"enab",
+				"Package Control: Enable Package"
+			],
+			[
+				"quick",
+				"Git: Quick Commit"
+			],
+			[
+				"bla",
+				"Git: Blame"
+			],
+			[
+				"setsyn",
+				"Set Syntax: C++"
+			],
+			[
+				"gitco",
+				"Git: Commit"
+			],
+			[
+				"proje",
+				"Project: Save As"
+			],
+			[
+				"open",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"di",
+				"Package Control: Disable Package"
+			],
+			[
+				"disb",
+				"Package Control: Disable Package"
+			],
+			[
+				"stack",
+				"Stackoverflow: Search Selection"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"stck",
+				"Stackoverflow: Search from Input"
+			],
+			[
+				"stcko",
+				"Stackoverflow: Search Selection"
+			],
+			[
+				"pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Enable Package"
+			],
+			[
+				"sort",
+				"Sort Lines"
+			],
+			[
+				"php",
+				"Format: Php"
+			],
+			[
+				"ina",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 132.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/hindol/Code/cpp/maximal_independent_set/.gitignore",
+		"/home/hindol/Code/cpp/maximal_independent_set/mis",
+		"/home/hindol/Code/cpp/maximal_independent_set/.stxxl",
+		"/home/hindol/Code/cpp/maximal_independent_set/makefile",
+		"/home/hindol/Code/cpp/maximal_independent_set/stxxl.errlog",
+		"/home/hindol/Code/cpp/maximal_independent_set/stxxl.log",
+		"/home/hindol/Code/cpp/maximal_independent_set/stxxl.data",
+		"/home/hindol/Code/cpp/maximal_independent_set/.stxxl.bak",
+		"/home/hindol/Code/cpp/STXXL/main.cpp",
+		"/home/hindol/.config/sublime-text-2/Packages/SublimeClang/SublimeClang.sublime-settings",
+		"/home/hindol/Code/scripts/ns2/testrun.tcl",
+		"/home/hindol/Code/cpp/STXXL/generate_random.h",
+		"/home/hindol/Softwares/ns-allinone-2.35/install",
+		"/home/hindol/Code/cpp/STXXL/merge_sort.h",
+		"/usr/include/stxxl/bits/io/syscall_file.h",
+		"/home/hindol/Code/cpp/STXXL/file.h",
+		"/home/hindol/Code/cpp/MergeSortExternal/main.cpp",
+		"/usr/include/stxxl/bits/algo/sort.h",
+		"/home/hindol/Code/cpp/STXXL/makefile",
+		"/home/hindol/Code/cpp/STXXL/STXXL.sublime-project",
+		"/home/hindol/Code/cpp/STXXL/STXXL.sublime-workspace",
+		"/home/hindol/.config/sublime-text-2/Packages/Package Control/Package Control.sublime-settings",
+		"/home/hindol/Code/CPP/STXXL/generate_random.h",
+		"/home/hindol/.config/sublime-text-2/Packages/Default/Global.sublime-settings",
+		"/home/hindol/Code/CPP/MergeSortExternal/main.cpp",
+		"/home/hindol/Code/CPP/STXXL/merge_sort.h",
+		"/home/hindol/.config/sublime-text-2/Packages/User/SublimeClang.sublime-settings",
+		"/home/hindol/Code/CPP/STXXL/main.cpp",
+		"/home/hindol/Code/CPP/STXXL/makefile",
+		"/usr/include/stxxl/bits/containers/vector.h",
+		"/home/hindol/.todomanager/todo-a8c73251b0a940acfa8546eb4cfaf23e.txt",
+		"/home/hindol/Code/CPP/STXXL/merge_sort.cpp",
+		"/home/hindol/Code/CPP/STXXL/STXXL.sublime-project",
+		"/usr/include/stxxl/bits/common/aligned_alloc.h",
+		"/usr/include/stxxl/bits/io/request.h",
+		"/home/hindol/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/hindol/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
+		"/home/hindol/.config/sublime-text-2/Packages/Terminal/Terminal.sublime-settings",
+		"/home/hindol/Code/CPP/hello",
+		"/home/hindol/.config/sublime-text-2/Packages/SublimeClang/Default.sublime-keymap",
+		"/home/hindol/Code/CPP/MergeSortExternal/Debug/input.txt",
+		"/home/hindol/.config/sublime-text-2/Packages/SideBarGit/SideBarGit.sublime-settings",
+		"/home/hindol/Code/CPP/hello.cpp",
+		"/home/hindol/Code/CPP/hello.sublime-project",
+		"/home/hindol/Code/CPP/makefile",
+		"/home/hindol/Code/PHP/index.php",
+		"/home/hindol/.config/sublime-text-2/Packages/Tag/Tag Package.sublime-settings",
+		"/home/hindol/Code/phpinfo.php"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"dummy_merger",
+			"int",
+			"\": \".*[^;]$\"}",
+			"\"tab\"",
+			"tab"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "main.cpp",
+					"settings":
+					{
+						"buffer_size": 3305,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2746,
+								2746
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "makefile",
+					"settings":
+					{
+						"buffer_size": 67,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								67,
+								67
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Makefile/Makefile.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 32.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.clang":
+	{
+		"height": 106.0
+	},
+	"output.exec":
+	{
+		"height": 106.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"mer",
+				"MergeSortExternal/main.cpp"
+			],
+			[
+				"mak",
+				"makefile"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 194.0,
+	"status_bar_visible": true
+}
