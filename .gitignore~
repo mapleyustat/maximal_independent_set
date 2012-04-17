@@ -1,5 +1,5 @@
 mis.bin
-*.o
+.o
 stxxl.log
 stxxl.errlog
 stxxl.data

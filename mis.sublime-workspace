@@ -5,7 +5,19 @@
 		[
 			[
 				"in",
-				"include <header>	"
+				"inc	#include \"…\""
+			],
+			[
+				"be",
+				"begin"
+			],
+			[
+				"edge",
+				"edgeList"
+			],
+			[
+				"ed",
+				"edgeList"
 			],
 			[
 				"using",
@@ -44,18 +56,10 @@
 	"buffers":
 	[
 		{
-			"file": "main.cpp",
+			"file": "src/main.cpp",
 			"settings":
 			{
-				"buffer_size": 3305,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "makefile",
-			"settings":
-			{
-				"buffer_size": 67,
+				"buffer_size": 1323,
 				"line_ending": "Unix"
 			}
 		}
@@ -63,13 +67,9 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 138.0,
 		"selected_items":
 		[
-			[
-				"ine",
-				"Indentation: Reindent Lines"
-			],
 			[
 				"dis",
 				"Package Control: Disable Package"
@@ -77,6 +77,18 @@
 			[
 				"ena",
 				"Package Control: Enable Package"
+			],
+			[
+				"cta",
+				"CTags: Rebuild Tags"
+			],
+			[
+				"git",
+				"Git: Quick Commit"
+			],
+			[
+				"ine",
+				"Indentation: Reindent Lines"
 			],
 			[
 				"git add",
@@ -109,10 +121,6 @@
 			[
 				"git ",
 				"Git: Pull"
-			],
-			[
-				"git",
-				"Package Control: Install Package"
 			],
 			[
 				"insta",
@@ -356,10 +364,28 @@
 	},
 	"file_history":
 	[
+		"/home/hindol/Downloads/max_in_set1.cpp",
+		"/home/hindol/Softwares/stxxl-1.3.1/include/stxxl/bits/algo/sort.h",
+		"/home/hindol/Softwares/stxxl-1.3.1/include/stxxl/bits/containers/priority_queue.h",
+		"/home/hindol/Code/cpp/maximal_independent_set/src/Vertex.cpp",
+		"/home/hindol/Code/cpp/maximal_independent_set/src/Vertex.h",
+		"/home/hindol/Code/cpp/maximal_independent_set/src/Edge.cpp",
+		"/home/hindol/Code/cpp/maximal_independent_set/src/Edge.h",
+		"/usr/include/c++/4.6/bits/stream_iterator.h",
+		"/usr/include/c++/4.6/ostream",
+		"/home/hindol/Code/cpp/MergeSortExternal/main.cpp",
+		"/home/hindol/Code/cpp/maximal_independent_set/src/main.cpp",
+		"/home/hindol/Code/cpp/maximal_independent_set/Makefile",
+		"/home/hindol/Softwares/stxxl-1.3.1/include/stxxl/bits/algo/sort_helper.h",
+		"/home/hindol/Code/cpp/maximal_independent_set/main.cpp",
+		"/home/hindol/Code/cpp/maximal_independent_set/Edge.h",
+		"/home/hindol/Code/cpp/maximal_independent_set/Edge.cpp",
+		"/home/hindol/Code/cpp/maximal_independent_set/makefile",
+		"/home/hindol/Code/cpp/pintos/src/utils/pintos-gdb",
+		"/home/hindol/Code/cpp/maximal_independent_set/mis.sublime-project",
 		"/home/hindol/Code/cpp/maximal_independent_set/.gitignore",
 		"/home/hindol/Code/cpp/maximal_independent_set/mis",
 		"/home/hindol/Code/cpp/maximal_independent_set/.stxxl",
-		"/home/hindol/Code/cpp/maximal_independent_set/makefile",
 		"/home/hindol/Code/cpp/maximal_independent_set/stxxl.errlog",
 		"/home/hindol/Code/cpp/maximal_independent_set/stxxl.log",
 		"/home/hindol/Code/cpp/maximal_independent_set/stxxl.data",
@@ -372,7 +398,6 @@
 		"/home/hindol/Code/cpp/STXXL/merge_sort.h",
 		"/usr/include/stxxl/bits/io/syscall_file.h",
 		"/home/hindol/Code/cpp/STXXL/file.h",
-		"/home/hindol/Code/cpp/MergeSortExternal/main.cpp",
 		"/usr/include/stxxl/bits/algo/sort.h",
 		"/home/hindol/Code/cpp/STXXL/makefile",
 		"/home/hindol/Code/cpp/STXXL/STXXL.sublime-project",
@@ -421,6 +446,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"sort",
+			"priority_queue",
+			"vector",
+			";",
+			"uint",
 			"dummy_merger",
 			"int",
 			"\": \".*[^;]$\"}",
@@ -433,6 +463,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"stxxl::sort",
+			"stxxl::priority_queue",
+			"stxxl::vector"
 		],
 		"reverse": true,
 		"show_context": true,
@@ -443,58 +476,31 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "main.cpp",
+					"file": "src/main.cpp",
 					"settings":
 					{
-						"buffer_size": 3305,
+						"buffer_size": 1323,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2746,
-								2746
+								323,
+								323
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/C++/C++.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "makefile",
-					"settings":
-					{
-						"buffer_size": 67,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								67,
-								67
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Makefile/Makefile.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 238.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -533,17 +539,13 @@
 		]
 	},
 	"menu_visible": true,
-	"output.clang":
-	{
-		"height": 106.0
-	},
 	"output.exec":
 	{
-		"height": 106.0
+		"height": 137.0
 	},
 	"replace":
 	{
-		"height": 0.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
