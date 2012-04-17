@@ -4,11 +4,10 @@
 struct PQElem
 {
 	VertexId priority;
-	VertexId vid;
 	bool inIndependentSet;
 
 	PQElem();
-	PQElem(VertexId prio, VertexId vid, bool inIndep);
+	PQElem(VertexId prio, bool inIndep);
 };
 
 class MorePrio

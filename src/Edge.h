@@ -10,7 +10,7 @@ struct Edge
 	Edge();
 	Edge(Vertex u, Vertex v);
 
-	bool LessSrc (const Edge& right) const;
+	bool LessSrc  (const Edge& right) const;
 	bool LessDest (const Edge& right) const;
 
 	static Edge Min();

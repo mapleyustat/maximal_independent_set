@@ -9,7 +9,7 @@ LDLIBS          += $(STXXL_LDLIBS)
 
 # add your own optimization, warning, debug, ... flags
 # (these are *not* set in stxxl.mk)
-CPPFLAGS        += -O3 -Wall -g -std=c++0x
+CPPFLAGS        += -O3 -Wall -Wextra -std=c++0x -g
 
 # build your application
 # (my_example.o is generated from my_example.cpp automatically)

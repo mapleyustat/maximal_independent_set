@@ -1,7 +1,14 @@
 #include "Edge.h"
 #include "PQElem.h"
+#include "stxxl_params.h"
 #include <stxxl.h>
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+
+typedef stxxl::PRIORITY_QUEUE_GENERATOR< PQElem, MorePrio,
+    PQ_M, 256 >::result PriorityQueue;
 
 std::ostream& operator<<(std::ostream& os, const Vertex& v)
 {
@@ -26,65 +33,146 @@ std::ostream& operator<<(std::ostream& os, const stxxl::vector<T>& v)
 
 std::ostream& operator<<(std::ostream& os, const PQElem& e)
 {
-    os << "[" << e.priority << "](" << e.vid << ", "
+    os << "[" << e.priority << "]("
         << (e.inIndependentSet ? "true" : "false") << ")";
     return os;
 };
 
-void Populate(stxxl::vector< Edge >& v)
+void Populate(stxxl::vector< Edge >& adjList, VertexId maxV)
 {
-    // Edge, Vertex contains no pointers
-	v.push_back( Edge(5, 3) );
-	v.push_back( Edge(4, 4) );
-	v.push_back( Edge(3, 5) );
-	v.push_back( Edge(2, 1) );
-	v.push_back( Edge(1, 2) );
+    srand ( static_cast<unsigned>( time(0) ) );
+
+    for(int i=1;i<maxV;i++)
+        for(int j=i+1;j<=maxV;j++)
+        {
+            //if( rand() & 0x1 )
+            if( rand() %10 == 0 )
+                adjList.push_back( Edge(i,j) );
+        }
+}
+
+void Input(stxxl::vector< Edge >& adjList)
+{
+    VertexId a,b;
+
+    while( std::cin>>a>>b )
+        adjList.push_back( Edge(a,b) );
+}
+
+
+bool pop_PQ( PriorityQueue& pq )
+{
+    VertexId u;
+    bool is_independent=false;
+
+    if( !pq.empty() )
+        u = pq.top().priority;
+
+
+    while( !pq.empty() && pq.top().priority == u )
+    {
+        is_independent = is_independent || pq.top().inIndependentSet;
+
+        // std::cout << "pop "<<pq.top().priority<<' '<<pq.top().inIndependentSet<<'\n';
+        pq.pop();
+    }
+
+    return ( ! is_independent );
+}
+
+void push_PQ(   PriorityQueue& pq,
+                stxxl::vector< Edge >::iterator &i,
+                stxxl::vector< Edge >::iterator end,
+                bool is_independent )
+{
+    VertexId u;
+
+    if( i!=end )
+        u=i->u.vid;
+
+    while( i!=end && i->u.vid == u )
+    {
+        pq.push( PQElem( i->v.vid, is_independent ) );
+        // std::cout<<"push "<< i->v.vid <<' '<< is_independent<<'\n';
+        ++i;
+    }
+}
+
+void FindMIS(stxxl::vector< Edge >& adjList,
+    stxxl::vector< Vertex >& indSet)
+{
+    PriorityQueue pq(PREFETCH_M, WRITE_M);
+
+    // Sort list by edge source
+    if ( !stxxl::is_sorted(adjList.begin(), adjList.end(), LessEdgeSrc()) )
+        stxxl::sort(adjList.begin(), adjList.end(), LessEdgeSrc(), SORT_M);
+
+    for (auto it = adjList.begin(); it != adjList.end();)
+    {
+        VertexId u = it->u.vid;
+
+        if( pq.empty() || pq.top().priority > u )
+        {
+            indSet.push_back(u);
+
+            //std::cout<<'\n'<<u<<"\n\n";
+
+            push_PQ( pq,it, adjList.end(),true );
+        }
+
+        else if ( pq.top().priority <= u )
+        {
+            VertexId v = pq.top().priority;
+
+            bool is_independent = pop_PQ( pq );
+
+            if( is_independent )
+            {
+                indSet.push_back(v);
+                //std::cout << '\n' << v << "\n\n";
+            }
+
+            if( v == u )
+                push_PQ( pq, it, adjList.end(), is_independent );
+        }
+    }
+
+    while( !pq.empty() )
+    {
+        VertexId v = pq.top().priority;
+
+        bool is_independent = pop_PQ( pq );
+
+        if( is_independent )
+        {
+            indSet.push_back(v);
+            //std::cout << '\n' << v << "\n\n";
+        }
+    }
 }
 
 int main(int argc, char const *argv[])
 {
-	/* STXXL Parameters. */
-	const uint B = 2; // Block size is 2 MB (default)
-    const uint M = 64 * B; // Main memory use limit in MB
-    
-    const uint PQM          = 48 * B * 1024 * 1024; // In bytes
-    const uint PrefetchM    = 8 * B * 1024 * 1024; // In bytes
-	const uint WriteM       = 8 * B * 1024 * 1024; // In bytes
+    stxxl::stats_data stats_begin(*stxxl::stats::get_instance());
 
-    typedef stxxl::PRIORITY_QUEUE_GENERATOR< PQElem, MorePrio,
-        PQM, 1 >::result PriorityQueue;
+    stxxl::vector< Edge > adjList;
 
-    stxxl::vector< Edge > edgeList;
-    Populate(edgeList);
+    if( argc>1 )
+        Populate(adjList,atol(argv[1]));
+    else
+        Input(adjList);
 
-    PriorityQueue pq(PrefetchM, WriteM);
+    // Edge list
+    // std::cout << adjList;
 
-    // Edge list before sorting
-    std::cout << edgeList;
+    stxxl::vector< Vertex > indSet;
+    FindMIS(adjList, indSet);
 
-    // Sort list by edge source
-    stxxl::sort(edgeList.begin(), edgeList.end(), LessEdgeSrc(), M);
+    // Maximal independent set
+    std::cout << "\n\n" << indSet << "\n\n";
 
-    // Edge list after sorting by source
-    std::cout << edgeList;
-
-    // Sort list by edge destination
-    stxxl::sort(edgeList.begin(), edgeList.end(), LessEdgeDest(), M);
-
-    // Edge list after sorting by destination
-    std::cout << edgeList;
-
-    for (auto &e : edgeList)
-    {
-        pq.push(PQElem(e.u.vid, e.u.vid, true));
-    }
-
-    while (!pq.empty())
-    {
-        std::cout << pq.top() << ", ";
-        pq.pop();
-    }
-    std::cout << std::endl;
+    stxxl::stats_data stats_end(*stxxl::stats::get_instance());
+    std::cout << stats_end - stats_begin;
 
     return 0;
 }

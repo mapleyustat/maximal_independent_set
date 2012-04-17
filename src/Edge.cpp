@@ -2,7 +2,15 @@
 
 Edge::Edge() {}
 
-Edge::Edge(Vertex _u, Vertex _v) : u(_u), v(_v) {}
+Edge::Edge(Vertex _u, Vertex _v) : u(_u), v(_v) 
+{
+	if( u.vid > v.vid )
+ 	{
+ 		Vertex t=u;
+ 		u=v;
+ 		v=t;
+	}
+}
 
 bool Edge::LessSrc (const Edge& right) const
 {
