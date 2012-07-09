@@ -9,7 +9,7 @@ struct Vertex
 	VertexId vid;
 
 	// Dummy satellite data
-	char dummy[1020]; // Size 1 MB
+	// char dummy[1024 * 1024 - sizeof(VertexId)]; // Size 1 MB
 
 	Vertex();
 	Vertex(VertexId vid);

@@ -9,12 +9,12 @@ LDLIBS          += $(STXXL_LDLIBS)
 
 # add your own optimization, warning, debug, ... flags
 # (these are *not* set in stxxl.mk)
-CPPFLAGS        += -O3 -Wall -Wextra -std=c++0x
+CPPFLAGS        += -O3 -Wall -Wextra -g -std=c++0x
 
 # build your application
 # (my_example.o is generated from my_example.cpp automatically)
-mis.bin: src/main.o src/Edge.o src/Vertex.o src/PQElem.o src/ostream-helpers.o src/mis.o
-	$(CXX) $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) src/main.o src/Edge.o src/Vertex.o src/PQElem.o src/ostream-helpers.o src/mis.o -o $@ $(LDLIBS)
+mis.bin: src/main.o src/Edge.o src/Vertex.o src/PQElem.o
+	$(CXX) $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) src/main.o src/Edge.o src/Vertex.o src/PQElem.o -o $@ $(LDLIBS)
 
 clean:
-	rm src/main.o src/Edge.o src/Vertex.o src/PQElem.o src/ostream-helpers.o src/mis.o mis.bin
+	rm src/main.o src/Edge.o src/Vertex.o src/PQElem.o mis.bin
